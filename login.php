@@ -35,19 +35,34 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             Login
         </title>
         <style>
-            
+  
         </style>
     </head>
     <body>
-            <div id="box">
-                <form method="post" class="form">
-                    <div class="fo-ma">Login</div>
-                    <input id="text" type="text" placeholder="Enter your name" name="user_name"><br><br>
-                    <input id="text" type="password" placeholder="Enter your password" name="password"><br><br>
-                    <input id="button" type="submit" value="Login"><br><br>
-                    <a href="signin.php">Signin</a>
-                </form>
-            </div>
+
+    <div class="area" >
+                <div id="box">
+                        <form method="post" class="form">
+                            <div class="fo-ma">Login</div>
+                            <input id="text" type="text" placeholder="Enter your name" name="user_name"><br><br>
+                            <input id="text" type="password" placeholder="Enter your password" name="password"><br><br>
+                            <input id="button" type="submit" value="Login"><br><br>
+                            <a href="signin.php">Signin</a>
+                        </form>
+                    </div>
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+        </div >
     </body>
 
 </html>

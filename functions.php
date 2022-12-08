@@ -23,7 +23,7 @@ function check_user($user_name,$con){
          $user_data=mysqli_fetch_assoc($result);
          if($user_data['user_name']===$user_name){
              $_SESSION['user_id']=$user_data['user_id'];
-             echo "the user name $user_name is alrady exist";
+             return "the user name $user_name is alrady exist";
          }
      }
 }
