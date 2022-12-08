@@ -7,9 +7,9 @@
 }
 #button{
     padding: 10px;
-    width: 100px;
+    width: 100%;
     color: white;
-    background-color: lightblue;
+    background-color: rgb(46, 95, 72);
     border:none
 }
 #box{

@@ -42,8 +42,8 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
             <div id="box">
                 <form method="post" class="form">
                     <div class="fo-ma">Login</div>
-                    <input id="text" type="text" name="user_name"><br><br>
-                    <input id="text" type="password" name="password"><br><br>
+                    <input id="text" type="text" placeholder="Enter your name" name="user_name"><br><br>
+                    <input id="text" type="password" placeholder="Enter your password" name="password"><br><br>
                     <input id="button" type="submit" value="Login"><br><br>
                     <a href="signin.php">Signin</a>
                 </form>
