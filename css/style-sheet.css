@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 .bg {
-    /* width: 100%;
-    height: 100vh;
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    background-size: 100% 100%; */
     background-image: linear-gradient(
           -45deg, 
           rgba(59,173,227,1) 0%, 
@@ -13,7 +7,7 @@
           rgba(152,68,183,1) 51%, 
           rgba(255,53,127,1) 100%
     );  
-    animation: AnimateBG 20s ease infinite;
+    animation: AnimateBG 18s ease infinite;
   }
   
   @keyframes AnimateBG { 
@@ -41,9 +35,11 @@
 #box{
     background-color: grey;
     margin: auto;
-    width: 300px;
+    width: 30%;
     padding: 20px;
-    vertical-align: center;
+    position: absolute;
+    top: 20%;
+    left: 35%;
     border-radius: 5px;
 }
 .fo-ma{
@@ -307,7 +303,7 @@
  
  .about .skills{
     margin:3rem 0;
-    color:white;
+
  }
  
  .about .skills .progress{
@@ -398,6 +394,7 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
     align-items: flex-start;
+    color:var(--white)
  }
  
  .services .box-container .box{

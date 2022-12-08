@@ -45,14 +45,35 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
         <style>
-           
             #p-error{
                 font-size: <?=$size?>;
                 color: <?=$color?>;
             }
+            .b {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: 100% 100%;
+            background-image: linear-gradient(
+                    -45deg, 
+                    rgba(59,173,227,1) 0%, 
+                    rgba(87,111,230,1) 25%, 
+                    rgba(152,68,183,1) 51%, 
+                    rgba(255,53,127,1) 100%
+            );  
+            animation: AnimateBG 20s ease infinite;
+            }
+
+            @keyframes AnimateBG { 
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+            }
         </style>
     </head>
-    <body class="bg">
+    <body class="b" >
         <div id="box">
             <form method="post">
                 <div class="fo-ma"><p id="p-error"><?=$masseg?></p></div>
@@ -65,7 +86,7 @@
                 <input id="text" type="text" placeholder="Enter your instagram link" name="instagram_link"><br><br>
                 <input id="text" type="password" placeholder="Enter password" name="password"><br><br>
                 <input id="button" type="submit" value="Signin"><br><br>
-                <a href="login.php">you have acount login</a>
+                <a href="login.php" style="font-size: 15px ;color:white;">you have acount? <span style="color: blue;">Login</span></a>
             </form>
         </div>
             
