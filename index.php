@@ -3,6 +3,15 @@
     include("connection.php");
     include("functions.php");
     $user_data=check_login($con);
+    $user_name=$user_data['user_name'];
+    $email=$user_data['email'];
+    $phone_number=$user_data['phone_number'];
+    $whats=$user_data['whatsapp_number'];
+    $face=$user_data['facebook_link'];
+    $insta=$user_data['instagram_link'];
+    $github=$user_data['github_link'];
+    $password = $user_data['password'];
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,14 +41,24 @@
             <a href="#contact">contact</a>
         </nav>
         <div class="follow">
-            <a href="#" class="fab fa-facebook-f"></a>
-            <a href="#" class="fab fa-whatsapp"></a>
-            <a href="#" class="fab fa-instagram"></a>
-            <a href="#" class="fab fa-github"></a>
+            <a href="#" class="fab fa-facebook-f color_wight"></a>
+            <a href="#" class="fab fa-whatsapp color_wight"></a>
+            <a href="#" class="fab fa-instagram color_wight"></a>
+            <a href="#" class="fab fa-github color_wight"></a>
         </div>
         </header>
         <section class="home" id="home">
-            <div></div>
+            <div class="image" data-aos="fade-right">
+                <img src="images/myself.jpg" alt="">
+                </div>
+
+                <div class="content color_wight">
+                <h3 data-aos="fade-up" class="color_wight">hi, i am <?=$user_name?></h3>
+                <span data-aos="fade-up" class="color_wight">web designer & developer</span>
+                <p data-aos="fade-up" class="color_wight">University student at the Faculty of Informatics Engineering at the International University of Science and Renaissance, enrolled in the program of 1,000 programmers launched by Madad.</p>
+                <a data-aos="fade-up" href="#about" class="btn color_wight">about me</a>
+            </div>
+
         </section>
         <!-- custom js file link  -->
         <script src="js/script.js"></script>

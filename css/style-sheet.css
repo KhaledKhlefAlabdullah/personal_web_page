@@ -104,7 +104,9 @@
     max-width: 1200px;
     text-align: center;
  }
- 
+ .color_wight{
+    color:var(--white);
+ }
  .heading{
     margin-bottom: 3rem;
     text-align: center;
@@ -163,29 +165,47 @@
     transition: .2s linear !important;
     text-align: center;
     z-index: 1000;
+    background-image: linear-gradient(
+          -45deg, 
+          rgb(6, 39, 54) 0%, 
+          rgb(43, 49, 80) 25%, 
+          rgb(60, 14, 77) 51%, 
+          rgb(158, 27, 75) 100%
+    );  
+    animation: AnimateBG 20s ease infinite;
  }
+ @keyframes AnimateBG { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
  
  .header .logo{
     text-transform: uppercase;
     border-bottom: var(--border-bold);
     font-weight: bolder;
     font-size: 4.5rem;
+    color: #eee;
  }
  
  .header .navbar{
     width: 100%;
+    
  }
  
  .header .navbar a{
+    
     display: block;
     font-size: 2.5rem;
     padding:1.5rem;
     margin:.5rem;
+    color:#eee;
  }
  
  .header .navbar a.active,
  .header .navbar a:hover{
-    background-color: var(--yellow);
+    background-color: var(--white);
+    color: var(--black);
  }
  
  .header .follow a{
@@ -228,9 +248,10 @@
  }
  
  .home .image img{
-    height: 65rem;
+    height: 50rem;
     padding:2rem;
     border:var(--border-bold);
+
  }
  
  .home .content{
@@ -246,7 +267,7 @@
  .home .content span{
     display: inline-block;
     padding:1rem 2rem;
-    background-color: var(--yellow);
+    background-color: var(--black);
     font-size: 2.5rem;
     margin:1rem 0;
  }
