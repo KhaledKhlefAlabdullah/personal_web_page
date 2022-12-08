@@ -1,6 +1,7 @@
 <?php
-
-include('staticVar.php');
+ session_start();
+ include("connection.php");
+ include("functions.php");
  $masseg='Signin';
  $color='';
  if($_SERVER['REQUEST_METHOD']=="POST"){
@@ -15,7 +16,10 @@ include('staticVar.php');
    
     if(!empty($user_name) && !empty($email) && !empty($phone_number) && !empty($whats) && !empty($face) && !empty($insta) && !empty($github) && !empty($password) && !is_numeric($user_name)){
        
-    
+        $masseg=check_user($user_name,$con);
+        $user_id=random_num(20);
+        $query="insert into users (user_id,user_name,password,email,phone_number,whatsapp_number,facebook_link,github_link,instagram_link) values('$user_id','$user_name','$password','$email','$phone_number','$whats','$face','$github','$insta')";
+        mysqli_query($con,$query);
         header("location: login.php");
         die;
        }

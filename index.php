@@ -1,10 +1,20 @@
 <?php
-    include('staticVar.php');
+ session_start();
+    include("connection.php");
+    include("functions.php");
+    $user_data=check_login($con);
+    $user_name=$user_data['user_name'];
+    $email=$user_data['email'];
+    $phone_number=$user_data['phone_number'];
+    $whats=$user_data['whatsapp_number'];
+    $face=$user_data['facebook_link'];
+    $insta=$user_data['instagram_link'];
+    $github=$user_data['github_link'];
+    $password = $user_data['password'];
     $proc_1=95;
     $proc_2=60;
     $proc_3=40;
     $proc_4=50;
-  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +61,7 @@
                 </div>
 
                 <div class="content color_wight">
-                <h3 data-aos="fade-up" class="color_wight">hi, i am  <?=$user_name?></h3>
+                <h3 data-aos="fade-up" class="color_wight">hi, i am <?=$user_name?></h3>
                 <span data-aos="fade-up" class="color_wight">web designer & developer</span>
                 <p data-aos="fade-up" class="color_wight">University student at the Faculty of Informatics Engineering at the International University of Science and Renaissance, enrolled in the program of 1,000 programmers launched by Madad.</p>
                 <a data-aos="fade-up" href="#about" class="btn color_wight">about me</a>
