@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="css/style-sheet.css">
 
 </head>
-<body class="b">
+<body class="bg">
     <header class="header">
-        <div id="menu-btn"></div>
+        <div id="menu-btn" class="fas fa-bars"></div>
         <a href="#home" class="logo">Menuo</a>
         <nav class="navbar">
             <a href="#home" class="active">home</a>
@@ -41,5 +41,19 @@
         <section class="home" id="home">
             <div></div>
         </section>
+        <!-- custom js file link  -->
+        <script src="js/script.js"></script>
+
+        <!-- aos js link  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+        <script>
+
+        AOS.init({
+        duration:800,
+        delay:300
+        });
+
+        </script>
 </body>
 </html>
